@@ -148,6 +148,7 @@
   <ItemGroup>
     <ClInclude Include="BOW.h" />
     <ClInclude Include="Metrics.h" />
+    <ClInclude Include="MLapp.h" />
     <ClInclude Include="Preprocess.h" />
     <ClInclude Include="Splitter.h" />
     <ClInclude Include="Tfidf.h" />

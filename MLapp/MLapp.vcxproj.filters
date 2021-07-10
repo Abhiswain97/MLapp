@@ -47,5 +47,8 @@
     <ClInclude Include="Metrics.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="MLapp.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

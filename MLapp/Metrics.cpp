@@ -62,19 +62,6 @@ double Metrics::binary_log_loss(std::vector<double>& y_probs) {
     return (-1) * (1 / double(this->y_test.size())) * sum;
 }
 
-// ------------------------------------------------- WIP
-// ------------------------------------------------------ //
-double Metrics::multiclass_log_loss(std::vector<std::vector<double>>& y_probs) {
-    std::vector<int> labels = this->unique_lables();
-    for (int i = 0; i < this->y_test.size(); i++) {
-        for (int j = 0; j < labels.size(); j++) {
-            if (labels[j] == y_test[i]) {
-            }
-        }
-    }
-}
-// ------------------------------------------------- WIP
-// ------------------------------------------------------ //
 
 // int main(int argc, char const *argv[])
 // {
