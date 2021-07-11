@@ -35,6 +35,14 @@ int main(int argc, char const* argv[]) {
 
     auto vector = bow.fit();
 
+    auto unq_wrds = bow.unique_words();
+
+    std::for_each(unq_wrds.begin(), unq_wrds.end(), [&](auto word) {
+        std::cout << word << " ";
+        });
+
+    std::cout << "\n";
+
     bow.print_vector(vector);
     
     return 0;

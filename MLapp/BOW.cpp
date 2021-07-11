@@ -13,7 +13,7 @@ void BOW::print_vector(std::vector<std::vector<double>>& vector) {
     for (auto& row : vector) {
         std::cout << "[ ";
         for (auto& element : row) {
-            std::cout << element << " ";
+            std::cout << element << "\t";
         }
         std::cout << "]" << std::endl;
     }

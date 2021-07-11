@@ -12,6 +12,7 @@
 #include <sstream>
 #include <vector>
 
+
 /**
  * Class containing utilities for computing TFIDF of a corpus of sentences.
  */
@@ -32,26 +33,6 @@ public:
 	 * Print the contents of the corpus.
 	 */
 	void print();
-
-	/**
-	 * Create a vector of unique words from the corpus
-	 * @return vector of unique words
-	 */
-	std::vector<std::string> unique_words();
-
-	/**
-	 * Create a map of counts of each word in string
-	 * @param sentence: The string
-	 * @return map containing counts of each word
-	 */
-	std::map<std::string, int> make_count_map(std::string& sentence);
-
-	/**
-	 * Tokenize a sentence by spaces
-	 * @param str: The string to tokenize
-	 * @return vector containing tokens
-	 */
-	std::vector<std::string> tokenize(std::string& sen);
 
 	/**
 	 * Computes the term-frequency of a word in a sentence
