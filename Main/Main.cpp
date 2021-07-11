@@ -29,8 +29,7 @@ int main(int argc, char const* argv[]) {
 		"this is the first document",
 		"this is the second document"
 	};
-    
-    Tfidf tfidf(corpus);
+
     BOW bow(corpus);
 
     auto vector = bow.fit();

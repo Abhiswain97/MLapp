@@ -15,45 +15,45 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Tfidf.cpp">
+    <ClCompile Include="src\Tfidf.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="BOW.cpp">
+    <ClCompile Include="src\BOW.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Splitter.cpp">
+    <ClCompile Include="src\Splitter.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Preprocess.cpp">
+    <ClCompile Include="src\Preprocess.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Metrics.cpp">
+    <ClCompile Include="src\Metrics.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Utils.cpp">
+    <ClCompile Include="src\Utils.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Tfidf.h">
+    <ClInclude Include="include\Tfidf.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="BOW.h">
+    <ClInclude Include="include\BOW.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Splitter.h">
+    <ClInclude Include="include\Splitter.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Preprocess.h">
+    <ClInclude Include="include\Preprocess.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Metrics.h">
+    <ClInclude Include="include\Metrics.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="MLapp.h">
+    <ClInclude Include="include\MLapp.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Utils.h">
+    <ClInclude Include="include\Utils.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

@@ -1,10 +1,6 @@
 #include "BOW.h"
 #include "Utils.h"
 
-
-
-
-
 std::vector<std::vector<double>> BOW::fit() {
     std::vector<std::vector<double>> bow_vector;
 
