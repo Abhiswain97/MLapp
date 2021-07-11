@@ -5,3 +5,4 @@
 #include "Preprocess.h"
 #include "Splitter.h"
 #include "Tfidf.h"
+#include "Utils.h"

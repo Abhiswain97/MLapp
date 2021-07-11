@@ -40,3 +40,22 @@ std::vector<std::string> utils::unique_words(std::vector<std::string>& corpus) {
 
     return unq_wrds;
 }
+
+void utils::print_vector(std::vector<std::vector<double>>& vector) {
+    for (auto& row : vector) {
+        std::cout << "[ ";
+        for (auto& element : row) {
+            std::cout << element << "\t";
+        }
+        std::cout << "]" << std::endl;
+    }
+}
+
+void utils::print(std::vector<std::string>& vec) {
+    for (auto&& v1 : vec) {
+        for (auto&& i : v1) {
+            std::cout << i;
+        }
+        std::cout << std::endl;
+    }
+}

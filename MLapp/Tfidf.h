@@ -12,7 +12,6 @@
 #include <sstream>
 #include <vector>
 
-
 /**
  * Class containing utilities for computing TFIDF of a corpus of sentences.
  */

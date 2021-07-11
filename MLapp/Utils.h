@@ -35,6 +35,18 @@ namespace utils {
 	 */
     std::vector<std::string> unique_words(std::vector<std::string>& corpus);
 
+	/**
+	 * Print the contents of the bow_vector
+	 *
+	 * @param vector which is to be printed
+	 */
+	void print_vector(std::vector<std::vector<double>>& vector);
+
+	/**
+	 * Print the contents of the corpus.
+	 */
+	void print(std::vector<std::string>& vec);
+
 }
 #endif // !UTILS_H_
 

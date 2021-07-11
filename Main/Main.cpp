@@ -35,7 +35,7 @@ int main(int argc, char const* argv[]) {
 
     auto vector = bow.fit();
 
-    auto unq_wrds = bow.unique_words();
+    auto unq_wrds = utils::unique_words(corpus);
 
     std::for_each(unq_wrds.begin(), unq_wrds.end(), [&](auto word) {
         std::cout << word << " ";
@@ -43,7 +43,7 @@ int main(int argc, char const* argv[]) {
 
     std::cout << "\n";
 
-    bow.print_vector(vector);
+    utils::print_vector(vector);
     
     return 0;
 }
