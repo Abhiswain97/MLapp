@@ -21,7 +21,7 @@ private:
     std::vector<int> unique_lables();
 
 public:
-    int tp, fp, tn, fn;
+    double tp, fp, tn, fn;
     /** True positive rate */
     double tpr,
         /** False positive rate */

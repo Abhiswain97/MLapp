@@ -43,6 +43,6 @@ int main(int argc, char const* argv[]) {
     std::cout << "\n";
 
     utils::print_vector(vector);
-    
+
     return 0;
 }

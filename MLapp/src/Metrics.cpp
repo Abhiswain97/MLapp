@@ -23,10 +23,10 @@ void Metrics::binary_classification_report() {
         else
             this->fn++;
 
-    this->tpr = this->tp / double(this->fn + this->tp);
-    this->fnr = this->fn / double(this->fn + this->tp);
-    this->tnr = this->tn / double(this->fp + this->tn);
-    this->fpr = this->fp / double(this->fp + this->tn);
+    this->tpr = this->tp / (this->fn + this->tp);
+    this->fnr = this->fn / (this->fn + this->tp);
+    this->tnr = this->tn / (this->fp + this->tn);
+    this->fpr = this->fp / (this->fp + this->tn);
 
     this->precision = this->tp / double(this->tp + this->fp);
     this->recall = this->tpr;
@@ -57,33 +57,8 @@ double Metrics::binary_log_loss(std::vector<double>& y_probs) {
     double sum = 0.0;
     for (int i = 0; i < this->y_test.size(); i++)
         sum += (this->y_test[i] * log(y_probs[i])) +
-        ((1 - this->y_test[i]) * log(1 - y_probs[i]));
+        ((1 - static_cast<double>(this->y_test[i])) * log(1 - y_probs[i]));
 
     return (-1) * (1 / double(this->y_test.size())) * sum;
 }
 
-
-// int main(int argc, char const *argv[])
-// {
-//     std::vector<int> y_test = {1,
-//                                0,
-//                                0,
-//                                1,
-//                                0,
-//                                1,
-//                                1};
-
-//     std::vector<int> y_pred = {0,
-//                                0,
-//                                1,
-//                                1,
-//                                0,
-//                                1,
-//                                1};
-
-//     Metrics metrics(y_test, y_pred);
-
-//     metrics.binary_classification_report();
-
-//     std::cout << "True positive rate: " << metrics.tpr << std::endl;
-// }
