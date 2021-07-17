@@ -47,6 +47,11 @@ namespace utils {
 	 */
 	void print(std::vector<std::string>& vec);
 
+	/*
+	* Transpose a 2d vector
+	*/
+	std::vector<std::vector<double>> transpose(std::vector<std::vector<double>>& vector);
+
 }
 #endif // !UTILS_H_
 

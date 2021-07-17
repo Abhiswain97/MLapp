@@ -59,3 +59,13 @@ void utils::print(std::vector<std::string>& vec) {
         std::cout << std::endl;
     }
 }
+
+std::vector<std::vector<double>> utils::transpose(std::vector<std::vector<double>>& vector) {
+    std::vector<std::vector<double>> transposed_vector(vector[0].size(), std::vector<double>());
+
+    for (size_t i = 0; i < vector.size(); i++)
+        for (size_t j = 0; j < vector[i].size(); j++)
+            transposed_vector[j].push_back(vector[i][j]);
+
+    return transposed_vector;
+}

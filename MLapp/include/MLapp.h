@@ -6,3 +6,4 @@
 #include "Splitter.h"
 #include "Tfidf.h"
 #include "Utils.h"
+#include "Linear.h"
