@@ -15,6 +15,11 @@
 
 namespace utils {
 
+	/**
+	 * Struct to capture return values from `read_csv` function
+	 * @param lines: vector of strings 
+	 * @param columns: Headers
+	 */
 	struct csv_details {
 		std::vector<std::string> lines;
 		std::string columns;
