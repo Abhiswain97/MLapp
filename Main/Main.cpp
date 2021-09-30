@@ -14,15 +14,27 @@ int main(int argc, char const* argv[]) {
 
     LinearModels lin(vector, y);
 
-    lin.initialize_weight_vector();
+    utils::print_vector(vector);
 
-    utils::print_vector(lin.wt);
+    std::string fname = "C:\\Users\\abhi0\\Desktop\\MLapp\\MLapp\\data\\Housing.csv";
 
-    auto t_vec = utils::transpose(vector);
+    auto lines = utils::read_csv(fname);
+    auto columns = utils::tokenize(lines.columns, ',');
 
-    auto res = lin.make_preds();
+    auto tok = utils::tokenize(fname, '\\');
+    
+    std::cout << "The Columns are: \n";
 
-    utils::print_vector(res);
+    std::cout << columns[1] << " " << columns[2] << "\n";
+    /*
+    for (auto& line : lines.first)
+    {
+        auto tokens = utils::tokenize(line, ',');
+        std::cout << tokens[1] << " " << tokens[2] << "\n";
+    }
+    */
+
+    // lin.StandardScaler();
 
     return 0;
 }

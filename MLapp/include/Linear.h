@@ -17,7 +17,7 @@ class LinearModels {
 
 public:
 	std::vector<std::vector<double>> X;
-	std::vector<std::vector<double>> wt;
+	std::vector<double> wt;
 	std::vector<double> y;
 	/*
 	* Constructor to initialize Linear models
@@ -28,11 +28,13 @@ public:
 	/*
 	* Intialize weight vector based on dimensions
 	**/
-	void initialize_weight_vector();
+	void initialize_weight_bias(int dims);
 
 	double sigmoid(double z);
 
 	std::vector<std::vector<double>> make_preds();
+
+	void StandardScaler();
 
 };
 

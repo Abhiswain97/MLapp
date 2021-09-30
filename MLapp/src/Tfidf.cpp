@@ -21,7 +21,7 @@ void Tfidf::print_vector(std::vector<std::vector<double>>& vector) {
 }
 
 double Tfidf::compute_tf(std::string& sentence, std::string& word) {
-    std::vector<std::string> tokens = utils::tokenize(sentence);
+    std::vector<std::string> tokens = utils::tokenize(sentence, ' ');
     auto counts = utils::make_count_map(sentence);
 
     return counts[word] / double(tokens.size());
@@ -37,7 +37,7 @@ std::map<std::string, double> Tfidf::compute_idf() {
     for (auto& word : unq_words) {
         unsigned __int64 counter = 0;
         for (auto& sentence : this->vec) {
-            auto tokens = utils::tokenize(sentence);
+            auto tokens = utils::tokenize(sentence, ' ');
             std::for_each(tokens.begin(), tokens.end(),
                 [&](std::string token) -> void {
                     counter += (token.compare(word)) ? 1 : 0;

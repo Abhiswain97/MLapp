@@ -15,6 +15,12 @@
 
 namespace utils {
 
+	struct csv_details {
+		std::vector<std::string> lines;
+		std::string columns;
+	};
+
+
 	/**
 	 * Create a map of counts of each word in string
 	 * @param sentence: The string
@@ -27,7 +33,7 @@ namespace utils {
 	 * @param str: The string to tokenize
 	 * @return vector containing tokens
 	 */
-    std::vector<std::string> tokenize(std::string& str);
+    std::vector<std::string> tokenize(std::string& str, char delimiter);
 
 	/**
 	 * Create a vector of unique words from the corpus
@@ -47,11 +53,18 @@ namespace utils {
 	 */
 	void print(std::vector<std::string>& vec);
 
-	/*
+	/**
 	* Transpose a 2d vector
 	*/
 	std::vector<std::vector<double>> transpose(std::vector<std::vector<double>>& vector);
 
+	/**
+	 * @brief Read and parse a CSV file.
+	 *
+	 * @param filename: The name of the file to read.
+	 * @return struct containing vector of lines of the csv, column names.
+	 */
+	csv_details read_csv(std::string& filename);
 }
 #endif // !UTILS_H_
 
