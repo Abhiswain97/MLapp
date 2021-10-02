@@ -7,3 +7,4 @@
 #include "Tfidf.h"
 #include "Utils.h"
 #include "Linear.h"
+#include "KNN.h"

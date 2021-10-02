@@ -7,6 +7,7 @@
 #include <cmath>
 #include <fstream>
 #include <iostream>
+#include <iomanip>
 #include <map>
 #include <numeric>
 #include <set>
@@ -50,8 +51,9 @@ namespace utils {
 	 * Print the contents of the bow_vector
 	 *
 	 * @param vector which is to be printed
-	 */
-	void print_vector(std::vector<std::vector<double>>& vector);
+	 */ 
+	template <typename T>
+	std::string print_vector(const T& t);
 
 	/**
 	 * Print the contents of the corpus.
@@ -70,6 +72,9 @@ namespace utils {
 	 * @return struct containing vector of lines of the csv, column names.
 	 */
 	csv_details read_csv(std::string& filename);
+
+
+	double round_upto(double num, int k);
 }
 #endif // !UTILS_H_
 

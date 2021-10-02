@@ -41,16 +41,33 @@ std::vector<std::string> utils::unique_words(std::vector<std::string>& corpus) {
 	return unq_wrds;
 }
 
-void utils::print_vector(std::vector<std::vector<double>>& vector) {
-	for (auto& row : vector) {
-		std::cout << "[ ";
-		for (auto& element : row) {
-			std::cout << element << "\t";
-		}
-		std::cout << "]" << std::endl;
-	}
-}
+template <typename T>
+std::string utils::print_vector(const T& vector) {
+	std::string s;
 
+	s += "\n";
+	s += "{";
+
+	for (auto& row : vector) {
+		for (auto& element : row) {
+			std::ostringstream ss;
+			ss << std::fixed << std::setprecision(2);
+			ss << element;
+			s += ss.str();
+			s += ", ";
+		}
+		s += "\n";
+	}
+
+	// clear the trailing comma, space
+	if(s.size() >= 2) s.erase(s.size() - 3);
+	
+	s += "}";
+	s += "\n";
+
+	return s;
+}
+ 
 void utils::print(std::vector<std::string>& vec) {
 	for (auto&& v1 : vec) {
 		for (auto&& i : v1) {
@@ -88,4 +105,14 @@ utils::csv_details utils::read_csv(std::string& filename) {
 	csv_details.lines = lines;
 
 	return csv_details;
+}
+
+
+double utils::round_upto(double num, int k) {
+
+	int approx = pow(10, k);
+
+	double value = (int)(num * approx + .5);
+
+	return (double)value / approx;
 }

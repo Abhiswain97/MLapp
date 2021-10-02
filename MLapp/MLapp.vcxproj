@@ -142,6 +142,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="src\BOW.cpp" />
+    <ClCompile Include="src\KNN.cpp" />
     <ClCompile Include="src\Linear.cpp" />
     <ClCompile Include="src\Metrics.cpp" />
     <ClCompile Include="src\Preprocess.cpp" />
@@ -151,6 +152,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\BOW.h" />
+    <ClInclude Include="include\KNN.h" />
     <ClInclude Include="include\Linear.h" />
     <ClInclude Include="include\Metrics.h" />
     <ClInclude Include="include\MLapp.h" />
