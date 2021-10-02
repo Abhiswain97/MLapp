@@ -41,6 +41,9 @@ std::vector<std::string> utils::unique_words(std::vector<std::string>& corpus) {
 	return unq_wrds;
 }
 
+/*
+* Modified from : http://inversionlabs.com/2015/10/30/vector-printing-template.html
+*/
 template <typename T>
 std::string utils::print_vector(const T& vector) {
 	std::string s;

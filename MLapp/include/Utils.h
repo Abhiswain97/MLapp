@@ -51,6 +51,7 @@ namespace utils {
 	 * Print the contents of the bow_vector
 	 *
 	 * @param vector which is to be printed
+	 * 
 	 */ 
 	template <typename T>
 	std::string print_vector(const T& t);
