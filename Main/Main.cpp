@@ -18,30 +18,39 @@ int main(int argc, char const* argv[]) {
 
     std::cout << utils::print_vector(vector);
 
-    std::string fname = "C:\\Users\\abhi0\\Desktop\\MLapp\\MLapp\\data\\Housing.csv";
+    std::string fname = "C:\\Users\\abhis\\repos\\MLapp\\MLapp\\data\\Housing.csv";
 
     auto lines = utils::read_csv(fname);
     auto columns = utils::tokenize(lines.columns, ',');
 
     auto tok = utils::tokenize(fname, '\\');
-    
-    std::cout << "The Columns are: \n";
 
-    std::cout << columns[1] << " " << columns[2] << "\n";
+    for (auto &col : columns) {
+        std::cout << col << ",";
+    }
+
+    std::cout << "\n";
+ 
+    for (auto &line : lines.lines) {
+        auto tok_line = utils::tokenize(line, ',');
+        for (auto& item : tok_line) {
+            std::cout << item << " ";
+        }
+        std::cout << "\n";
+    }
 
     auto hps = KNN::generate_random_hyperplanes(4, 5);
 
     std::cout << utils::print_vector(hps);
 
-    /*
-    for (auto& line : lines.first)
+    /*for (auto& line : lines.first)
     {
         auto tokens = utils::tokenize(line, ',');
         std::cout << tokens[1] << " " << tokens[2] << "\n";
-    }
-    */
+    }*/
+    
 
-    // lin.StandardScaler();
+    lin.StandardScaler();
 
     return 0;
 }

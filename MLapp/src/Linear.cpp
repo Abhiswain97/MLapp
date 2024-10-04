@@ -14,11 +14,16 @@ void LinearModels::StandardScaler() {
 		std::cout << sum / this->X.size() << " ";
 	}
 
-	//utils::print_vector(this->X);
+	utils::print_vector(this->X);
 }
 
 double LinearModels::sigmoid(double z) {
 	return 1 / (1 + exp(-1 * z));
+}
+
+std::vector<std::vector<double>> LinearModels::make_preds()
+{
+	return std::vector<std::vector<double>>();
 }
 
 
